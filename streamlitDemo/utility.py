@@ -251,6 +251,9 @@ def apiSetupPageOperation(inputType):
 
 # AUTOPLAY AUDIO
 def autoplay_audio(audioFile):
+    print(audioFile)
+    with open(f"/mount/src/nsmqai/streamlitDemo/assets/{audioFile}", "rb") as f:
+        print(f)
     with open(audioFile, "rb") as f:
         data = f.read()
         b64 = base64.b64encode(data).decode()
